@@ -17,8 +17,6 @@
 # inherit from common mofd-common
 -include device/asus/mofd-common/BoardConfigCommon.mk
 
-TARGET_RELEASETOOLS_EXTENSIONS := device/asus/Z008
-
 # Charger
 BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/asus/Z008/charger/images
 
@@ -28,6 +26,9 @@ BOARD_RECOVERY_KEY := device/asus/Z008/keys/recovery_z008.sig
 
 # Partitions
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12478019584
+
+# Require Ifwi version
+TARGET_BOARD_INFO_FILE ?= device/asus/Z008/board-info.txt
 
 # Use the non-open-source parts, if they're present
 -include vendor/asus/Z008/BoardConfigVendor.mk
